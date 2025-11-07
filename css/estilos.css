@@ -1,217 +1,286 @@
-body {
-  background: #35247b;
-  color: white;
-  font-family: "Source Sans Pro", sans-serif;
-  margin: 0;
+:root {
+  --primary: #35247b;
+  --accent: #026fff;
+  --card-bg: #22223b;
+  --text: #fff;
+  --brand: #ff2e88;
+  --radius: 18px;
+  --shadow: 0 4px 24px rgba(0,0,0,0.15);
 }
 
-header {
-  background-color: #1a1a1a;
-  border-radius: 20px;
-  padding-bottom: 10px;
+body {
+  margin: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+  background: var(--primary);
+  color: var(--text);
+}
+
+.header {
   display: flex;
-  height: px;
-  background-image: url("../images/grupo-de-jóvenes-empresarios-su-trabajo.jpg");
-  background-size: 400px 240px;
-  background-position-x: right;
-  background-repeat: no-repeat;
-  height: 210px;
+  justify-content: space-between;
+  align-items: center;
+  background: #181828;
+  padding: 0.7em 1.5em;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
 }
 
 .logo {
-  height: 417px;
-}
-
-.header ul {
-  display: flex;
-  padding: 10px 20px;
-}
-
-.header li {
-  margin: 20px 20px;
-}
-
-/* .hero {
-  background-image: url("../images/Fondo_Pro_PCs.PNG");
-  background-size: 1158px 686px;
-  height: 686px;
-  background-repeat: no-repeat;
-  background-position-x: right;
-} */
-
-/* .page_web {
-  background-image: url("../images/grupo-de-jóvenes-empresarios-su-trabajo.jpg");
-  background-size: 1280px 867px;
-  background-repeat: no-repeat;
-  background-position-x: right;
-} */
-
-.hero_image {
-  border-radius: 30px;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Fjalla One", sans-serif;
-  font-weight: normal;
-}
-
-h1 {
-  font-size: 40px;
-  line-height: 1.5;
-  letter-spacing: -0.2px;
-}
-
-ul,
-ol {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  text-transform: uppercase;
-}
-
-.header ul strong {
-  color: white;
-}
-
-h1,
-h2 {
-  margin-left: 10px;
-}
-
-h1 strong {
-  color: #026fff;
-}
-
-.ancla,
-.page_web_ancla,
-.bot_ancla,
-.whatsapp_ancla,
-.project_ancla,
-.project_bot_ancla,
-.project_wap_ancla {
-  text-decoration: none;
-  color: pink;
-}
-
-.page_webContainer,
-.page_web_imgContainer,
-.whatsapp_Content {
-  width: 500px;
-}
-
-.bot_Content {
-  width: 500px;
-  height: 248;
-}
-
-/* Bordes */
-
-figure {
-  margin: 0;
-}
-
-.pagina {
-  border: 1px solid gray;
-  border-radius: 45px;
-}
-
-.project_wap,
-.project_bot,
-.projectContainer {
-  /* border: 1px solid #ca11b6;
-  border-radius: 10px; */
-  margin-bottom: 15px;
-  padding-left: 10px;
-  padding-bottom: 10px;
-  display: flex;
-}
-
-.project_Container,
-.project_botContainer,
-.project_wapContainer {
-  width: 300px;
-}
-
-.images_bots1,
-.images_bots2 {
-  margin: 10px;
-}
-
-.images_bots1_Image,
-.images_bots2_Image {
-  border-radius: 35px;
-}
-
-.nevis_page_img,
-.page_web_imgContainer {
-  margin-top: 15px;
-  border-radius: 35px;
-}
-
-.page_web,
-.bot,
-.whatsApp {
-  border: 1px solid #3d1ba2;
-  border-radius: 15px;
-  margin-bottom: 15px;
-  padding-left: 10px;
-  padding-bottom: 10px;
-  display: flex;
-}
-
-/* Iconos diseñados por <a href="https://www.flaticon.es/autores/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.es/" title="Flaticon"> www.flaticon.es</a> */
-
-.contacto {
-  background-color: #056fff;
-  color: white;
-  height: 150;
-  padding: 16px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 0.7em;
+}
+.brand {
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 1.7em;
+  color: var(--accent);
+  letter-spacing: 1px;
 }
 
-.social-link {
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  background-size: 50px 50px;
-  margin: 0 10px;
+.menu ul {
+  display: flex;
+  gap: 2em;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
-.social-link.twitter {
-  background-image: url("../images/twitter.svg");
+.menu a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
 }
-.social-link.facebook {
-  background-image: url("../images/facebook.svg");
+.menu a:hover {
+  color: var(--accent);
 }
-.social-link.whatsapp {
-  background-image: url("../images/whatsapp.svg");
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-size: 2em;
+  cursor: pointer;
 }
-.social-link.instagram {
-  background-image: url("../images/instagram.svg");
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 2em 1em;
+  gap: 2em;
+}
+.hero-content {
+  max-width: 500px;
+}
+.hero h1 {
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 2.5em;
+  margin-bottom: 0.3em;
+}
+.highlight {
+  color: var(--accent);
+}
+.subtitle {
+  color: var(--brand);
+  font-size: 1.2em;
+}
+.hero-image img {
+  border-radius: var(--radius);
+  width: 100%;
+  max-width: 400px;
+  box-shadow: var(--shadow);
+}
+.cta {
+  background: var(--accent);
+  color: var(--text);
+  border: none;
+  padding: 0.7em 1.5em;
+  border-radius: var(--radius);
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 1em;
+  transition: background 0.2s;
+}
+.cta:hover {
+  background: var(--brand);
+}
+
+.services {
+  padding: 2em 1em;
+  text-align: center;
+}
+.cards {
+  display: flex;
+  gap: 2em;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1.5em;
+}
+.card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.5em;
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s;
+}
+.card:hover {
+  transform: translateY(-6px) scale(1.03);
+}
+.card-link {
+  margin-top: 1em;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 2px solid var(--accent);
+  transition: color 0.2s;
+}
+.card-link:hover {
+  color: var(--brand);
+  border-bottom: 2px solid var(--brand);
+}
+
+.projects {
+  padding: 2em 1em;
+  text-align: center;
+}
+.project-list {
+  display: flex;
+  gap: 2em;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1.5em;
+}
+.project-card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1em;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.project-card h4 {
+  margin: 0.7em 0 0.4em 0;
+}
+.project-card a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 2px solid var(--accent);
+  transition: color 0.2s;
+}
+.project-card a:hover {
+  color: var(--brand);
+  border-bottom: 2px solid var(--brand);
+}
+
+.contact {
+  padding: 2em 1em;
+  text-align: center;
+}
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  max-width: 350px;
+  margin: 0 auto 2em auto;
+}
+.contact input, .contact button {
+  padding: 0.7em;
+  border-radius: var(--radius);
+  border: none;
+  font-size: 1em;
+}
+.contact input {
+  background: #2a2a4d;
+  color: var(--text);
+}
+.contact button {
+  background: var(--accent);
+  color: var(--text);
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+.contact button:hover {
+  background: var(--brand);
+}
+#formMsg {
+  color: var(--brand);
+  font-size: 1em;
+  margin-top: 0.5em;
+}
+.social {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  margin-top: 1em;
+}
+.social img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.2s;
+}
+.social img:hover {
+  transform: scale(1.15);
 }
 
 .footer {
-  color: rgb(194, 41, 135);
-  background-color: rgb(175, 214, 108);
-  height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  background: #181828;
+  color: #fff;
+  text-align: center;
+  padding: 1.5em 1em;
+  border-radius: var(--radius) var(--radius) 0 0;
+  margin-top: 2em;
+  font-size: 1em;
+}
+.footer a {
+  color: var(--accent);
+  text-decoration: none;
+  margin: 0 0.5em;
+}
+.footer a:hover {
+  color: var(--brand);
 }
 
-.footer img {
-  vertical-align: middle;
-  margin-left: 320px;
+/* Responsive */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .cards, .project-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+  }
+  .header {
+    flex-direction: column;
+    gap: 1em;
+  }
+  .menu ul {
+    flex-direction: column;
+    gap: 1em;
+    background: #181828;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 180px;
+    padding: 1em;
+    border-radius: 0 0 var(--radius) var(--radius);
+    box-shadow: var(--shadow);
+    display: none;
+  }
+  .menu.open ul {
+    display: flex;
+  }
+  .menu-toggle {
+    display: block;
+  }
 }
-
-.footer p {
-  padding: 15px;
-}
-
-/* Flexbox */
