@@ -1,9 +1,9 @@
 :root {
-  --primary: #35247b;
+  --primary: #82d373;
   --accent: #026fff;
-  --card-bg: #22223b;
+  --card-bg: #3131c8;
   --text: #fff;
-  --brand: #ff2e88;
+  --brand: #fff;
   --radius: 18px;
   --shadow: 0 4px 24px rgba(0,0,0,0.15);
 }
@@ -19,7 +19,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #181828;
+  background: #fff;
   padding: 0.7em 1.5em;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
@@ -198,7 +198,7 @@ body {
   font-size: 1em;
 }
 .contact input {
-  background: #2a2a4d;
+  background: #57ed61;
   color: var(--text);
 }
 .contact button {
